@@ -1,0 +1,9 @@
+ZooKeeper, dağıtık uygulamalar geliştirilmesine izin veren, dağıtık bir koordinasyon servisi olarak tanımlanabilir [1, 2]. İlk olarak Yahoo’da şirket uygulamalarının, konfigürasyon bilgilerine hataya dayanıklı ve kolay bir şekilde ulaşabilmesini sağlamak için geliştirilmeye başlanmıştır [3]. Önceden Hadoop içerisinde bir alt proje olan ZooKeeper, zamanla üst seviye bir Apache projesi haline gelmiştir. ZooKeeper’a dağıtık sunucu kümeleri üzerindeki işleri koordine etmeye yardımcı olacak çeşitli özellikler eklenmiştir. ZooKeeper, kullanıcılarına yüksek erişilebilirlik ve yüksek performans özellikleri sağlar. Aynı zamanda, geliştiricilere açık kaynak gerçekleştirimler içeren bir kütüphane sunar.<br>
+<br>
+ZooKeeper’ın çalışma mantığı, znode olarak adlandırılan düğüm kavramına dayanır. ZooKeeper, işlevini gerçekleştirmek için gerekli bilgileri znode düğümleri vasıtası ile tutar. ZooKeeper ile hiyerarşik ve yüksek erişilebilirliğe (high availability) sahip bir dosya sistemi sağlanabilir (Şekil 1). Bir znode düğümü, veri tutmak için (bir dosya gibi) veya başka znode düğümlerini tutmak için (dizin gibi) kullanılabilir. Örneğin Şekil 1’de, arama znode düğümünün altında, indeks1, yedek1, indeks2 veyedek2 znode düğümleri yer almaktadır. Bir znode düğümü, geçici (ephemeral) veya kalıcı (persistent) tipte tanımlanabilir. Geçici znode düğümü, kendisini oluşturan istemcinin bağlantısı kesildiğinde ZooKeeper hizmeti tarafından silinir. Kalıcı znode düğümü, istemcinin bağlantısı kesildiğinde silinmez.
+
+<br>
+Kullanım durumunda ZooKeeper avantajları;<br>
+- ZooKeeper bize dağıtılmış bir koordinasyon ve failover mekanizması verdi.<br>
+- İlişkisel tablolar oluşturma gereği duymadan, az miktarda ilgili bilgi için iyi bir seçenek olabilir.<br>
+- Saatler sistem durumunu izlemede ve buna yanıt vermede yardımcı olabilir.
